@@ -1,0 +1,28 @@
+<svg width="66" height="66" viewBox="0 0 66 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Group 9</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-14926 -1063)">
+<g id="Group 9">
+<g id="Ellipse 4.1">
+<mask id="mask0_outline_ins">
+<use xlink:href="#path0_fill" fill="white" transform="translate(14926 1063)"/>
+</mask>
+<g mask="url(#mask0_outline_ins)">
+<use xlink:href="#path1_stroke_2x" transform="translate(14926 1063)" fill="#197AE3"/>
+</g>
+</g>
+<g id="automatic-flash">
+<g id="Group">
+<g id="Vector">
+<use xlink:href="#path2_fill" transform="translate(14947 1083)" fill="#197AE3"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 66 33C 66 51.2254 51.2254 66 33 66C 14.7746 66 0 51.2254 0 33C 0 14.7746 14.7746 0 33 0C 51.2254 0 66 14.7746 66 33Z"/>
+<path id="path1_stroke_2x" d="M 65 33C 65 50.6731 50.6731 65 33 65L 33 67C 51.7777 67 67 51.7777 67 33L 65 33ZM 33 65C 15.3269 65 1 50.6731 1 33L -1 33C -1 51.7777 14.2223 67 33 67L 33 65ZM 1 33C 1 15.3269 15.3269 1 33 1L 33 -1C 14.2223 -1 -1 14.2223 -1 33L 1 33ZM 33 1C 50.6731 1 65 15.3269 65 33L 67 33C 67 14.2223 51.7777 -1 33 -1L 33 1Z"/>
+<path id="path2_fill" d="M 4.36039e-08 0L 4.36039e-08 17.7139L 4.37444 17.7139L 4.37444 31L 14.5858 13.2861L 8.74888 13.2861L 14.5858 0L 4.36039e-08 0ZM 23.3334 0L 20.4188 0L 15.747 13.2861L 18.5199 13.2861L 19.5421 10.332L 24.2075 10.332L 25.2271 13.2861L 28 13.2861L 23.3334 0ZM 20.1968 8.34289L 21.8735 2.95406L 23.5503 8.34289L 20.1968 8.34289Z"/>
+</defs>
+</svg>

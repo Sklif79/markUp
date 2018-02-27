@@ -1,0 +1,44 @@
+<svg width="65" height="65" viewBox="0 0 65 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Group 2</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-17825 -2854)">
+<g id="Group 2">
+<g id="Group">
+<g id="Ellipse 6.1">
+<mask id="mask0_outline_ins">
+<use xlink:href="#path0_fill" fill="white" transform="translate(17825 2854)"/>
+</mask>
+<g mask="url(#mask0_outline_ins)">
+<use xlink:href="#path1_stroke_2x" transform="translate(17825 2854)" fill="#197AE3"/>
+</g>
+</g>
+<g id="Rectangle 39">
+<use xlink:href="#path2_fill" transform="matrix(0.698712 -0.715403 0.723252 0.690585 17847.1 2896.51)" fill="#197AE3"/>
+</g>
+</g>
+<g id="Ellipse 7">
+<mask id="mask1_outline_ins">
+<use xlink:href="#path3_fill" fill="white" transform="translate(17861.2 2887.62)"/>
+</mask>
+<g mask="url(#mask1_outline_ins)">
+<use xlink:href="#path4_stroke_2x" transform="translate(17861.2 2887.62)" fill="#197AE3"/>
+</g>
+</g>
+<g id="Ellipse 7.1">
+<mask id="mask2_outline_ins">
+<use xlink:href="#path3_fill" fill="white" transform="translate(17846 2875.79)"/>
+</mask>
+<g mask="url(#mask2_outline_ins)">
+<use xlink:href="#path4_stroke_2x" transform="translate(17846 2875.79)" fill="#197AE3"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 65 32.5C 65 50.4493 50.4493 65 32.5 65C 14.5507 65 0 50.4493 0 32.5C 0 14.5507 14.5507 0 32.5 0C 50.4493 0 65 14.5507 65 32.5Z"/>
+<path id="path1_stroke_2x" d="M 64 32.5C 64 49.897 49.897 64 32.5 64L 32.5 66C 51.0015 66 66 51.0015 66 32.5L 64 32.5ZM 32.5 64C 15.103 64 1 49.897 1 32.5L -1 32.5C -1 51.0015 13.9985 66 32.5 66L 32.5 64ZM 1 32.5C 1 15.103 15.103 1 32.5 1L 32.5 -1C 13.9985 -1 -1 13.9985 -1 32.5L 1 32.5ZM 32.5 1C 49.897 1 64 15.103 64 32.5L 66 32.5C 66 13.9985 51.0015 -1 32.5 -1L 32.5 1Z"/>
+<path id="path2_fill" d="M 0 1.08108C 0 0.484015 0.484015 0 1.08108 0L 28.9815 0C 29.5785 0 30.0625 0.484015 30.0625 1.08108C 30.0625 1.67814 29.5785 2.16215 28.9815 2.16215L 1.08108 2.16215C 0.484014 2.16215 0 1.67814 0 1.08108Z"/>
+<path id="path3_fill" d="M 9.78261 4.83632C 9.78261 7.50734 7.5927 9.67264 4.8913 9.67264C 2.18991 9.67264 0 7.50734 0 4.83632C 0 2.16529 2.18991 0 4.8913 0C 7.5927 0 9.78261 2.16529 9.78261 4.83632Z"/>
+<path id="path4_stroke_2x" d="M 7.78261 4.83632C 7.78261 6.38152 6.5095 7.67264 4.8913 7.67264L 4.8913 11.6726C 8.67589 11.6726 11.7826 8.63317 11.7826 4.83632L 7.78261 4.83632ZM 4.8913 7.67264C 3.2731 7.67264 2 6.38152 2 4.83632L -2 4.83632C -2 8.63317 1.10672 11.6726 4.8913 11.6726L 4.8913 7.67264ZM 2 4.83632C 2 3.29112 3.2731 2 4.8913 2L 4.8913 -2C 1.10672 -2 -2 1.03947 -2 4.83632L 2 4.83632ZM 4.8913 2C 6.5095 2 7.78261 3.29112 7.78261 4.83632L 11.7826 4.83632C 11.7826 1.03947 8.67589 -2 4.8913 -2L 4.8913 2Z"/>
+</defs>
+</svg>

@@ -1,0 +1,18 @@
+<svg width="16" height="16" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Rectangle 30</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-18417 136)">
+<g id="Rectangle 30">
+<mask id="mask0_outline_ins">
+<use xlink:href="#path0_fill" fill="white" transform="translate(18417 -136)"/>
+</mask>
+<g mask="url(#mask0_outline_ins)">
+<use xlink:href="#path1_stroke_2x" transform="translate(18417 -136)" fill="#FFFFFF" fill-opacity="0.5"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 2C 0 0.895431 0.895431 0 2 0L 14 0C 15.1046 0 16 0.895431 16 2L 16 14C 16 15.1046 15.1046 16 14 16L 2 16C 0.895431 16 0 15.1046 0 14L 0 2Z"/>
+<path id="path1_stroke_2x" d="M 2 1L 14 1L 14 -1L 2 -1L 2 1ZM 15 2L 15 14L 17 14L 17 2L 15 2ZM 14 15L 2 15L 2 17L 14 17L 14 15ZM 1 14L 1 2L -1 2L -1 14L 1 14ZM 2 15C 1.44772 15 1 14.5523 1 14L -1 14C -1 15.6569 0.343146 17 2 17L 2 15ZM 15 14C 15 14.5523 14.5523 15 14 15L 14 17C 15.6569 17 17 15.6569 17 14L 15 14ZM 14 1C 14.5523 1 15 1.44772 15 2L 17 2C 17 0.343146 15.6569 -1 14 -1L 14 1ZM 2 -1C 0.343146 -1 -1 0.343146 -1 2L 1 2C 1 1.44772 1.44772 1 2 1L 2 -1Z"/>
+</defs>
+</svg>

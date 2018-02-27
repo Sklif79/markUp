@@ -1,0 +1,12 @@
+<svg width="11" height="8" viewBox="0 0 11 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Path</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-13173 -182)">
+<g id="Path">
+<use xlink:href="#path0_fill" transform="translate(13173 182)" fill="#FFFFFF"/>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 4.59184 8L 0 3.67308L 1.28571 2.46154L 4.59184 5.57692L 9.57143 0L 10.8571 1.21154L 4.59184 8Z"/>
+</defs>
+</svg>
