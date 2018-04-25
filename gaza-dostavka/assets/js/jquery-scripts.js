@@ -213,7 +213,7 @@ function initMapStation() {
 
     //чтобы иконка стала активной, добавить нужному <i> класс active
     $.ajax({
-        url: "https://github.com/Sklif79/markUp/blob/master/gaza-dostavka/assets/js/data.json"
+        url: "/assets/js/data.json"
     }).done(function (data) {
         objectManager.add(data);
     });
@@ -275,7 +275,7 @@ function initOfficeMap() {
     myMap.geoObjects.add(objectManager);
 
     $.ajax({
-        url: "https://github.com/Sklif79/markUp/blob/master/gaza-dostavka/assets/js/data-offices.json"
+        url: "/assets/js/data-offices.json"
     }).done(function (data) {
 
         // window.cityObjData = data;
@@ -368,3 +368,12 @@ function findCityId(arr, id) {
 
     return cityObj[0];
 }
+
+
+
+
+
+
+
+
+
