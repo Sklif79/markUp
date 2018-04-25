@@ -275,7 +275,7 @@ function initOfficeMap() {
     myMap.geoObjects.add(objectManager);
 
     $.ajax({
-        url: "/assets/js/data-offices.json"
+        url: "data-offices.json"
     }).done(function (data) {
 
         // window.cityObjData = data;
