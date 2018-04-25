@@ -7,8 +7,14 @@ ready(function () {
     asideFidback();
     mainPage();
     radioBtn($('.shipment-form__city input[type="radio"]'));
+    radioBtn($('.radio-inline input[type="radio"]'));
     tooltipPosition();
     checkedInput();
+    jQueryTabs();
+    countTabsContentList();
+    shiftCenterPageDescription();
+    faq();
+    cropText($('.useful-information__item-txt'), 120);
 
     hoverImages('div.nav-index', 'div.nav-index__item');
     hoverImages('ul.aside-nav', '.aside-nav__link');
@@ -17,7 +23,10 @@ ready(function () {
 
     $('.three-columns__title').setMaxHeights();
     $('.four-columns__title').setMaxHeights();
-    $('.additional-equipment__name').setMaxHeights();
+
+    setTimeout(function () {
+        $('.additional-equipment__name').setMaxHeights();
+    }, 0);
 
     $(window).resize(function () {
         setTimeout(function () {
@@ -130,7 +139,7 @@ function findParent(el, class_) {
 
 //появление после загрузки страницы
 $(window).bind('load', function () {
-    var hiddenBeforLoad = '.filter-section, ' + '.index-slider__item, ' + '.card-inner__pager__img, ' + '.card-inner__slider-img';
+    var hiddenBeforLoad = '.filter-section, ' + '.index-slider__item, ' + '.card-inner__pager__img, ' + '.shipment-gallery-slider__item, ' + '.article-slider, ' + '.card-inner__slider-img';
 
     $(hiddenBeforLoad).css({ 'opacity': '1' });
 });
@@ -304,7 +313,6 @@ $.fn.setMaxHeights = function () {
 (function () {
     $('input.js-only-digits').keypress(function (e) {
         if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
-            console.log('ddd');
             return false;
         }
     });
@@ -352,23 +360,107 @@ function tooltipPosition() {
     }
 }
 
+//кнопка наверх
+(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 700) {
+            $('#toUp').show();
+        } else {
+            $('#toUp').hide();
+        }
+    });
+
+    $(document).on('click', '#toUp', function () {
+        $('html, body').animate({ scrollTop: 0 }, 500);
+    });
+})();
+
+//кастомные табы
+function jQueryTabs() {
+    $('.tab').on('click', function () {
+        $(this).closest('.tabs-wrap').find('.tab, .panel').removeClass('active');
+        $(this).addClass('active').closest('.tabs-wrap').find('div[data-id="' + $(this).attr('data-id') + '"]').addClass('active');
+    });
+
+    $('.tabs-wrap').each(function () {
+        var tabCount = $('.tab', $(this)).length;
+        if (tabCount === 1) {
+            $('.tab', $(this)).addClass('js-single');
+        } else if (tabCount > 1) {
+            $('.tab', $(this)).css('width', 100 / tabCount + '%');
+        }
+    });
+}
+
 //кастомный input[type="checkbox"]
 /**
  * custom input[type='chekbox']
  * toggle class active to parent element input (label) after click
  */
 function checkedInput() {
-    var checkbox = document.documentElement.querySelectorAll('input[type="checkbox"]');
+    var reset = document.querySelectorAll('input[type="reset"]'),
+        $target,
+        $slider,
+        $pointArr,
+        width,
+        index = -1;
 
-    checkbox.forEach(function (item) {
-        item.addEventListener('change', function () {
-            if (this.checked) {
-                this.parentElement.classList.add('active');
-            } else {
-                this.parentElement.classList.remove('active');
+    inspectionInputs(document.querySelectorAll('input[type="checkbox"], input[type="radio"]'));
+
+    document.addEventListener('change', function (e) {
+        $target = $(e.target);
+        $slider = $target.closest('.radio-progress');
+        $pointArr = $slider.find('.radio-btn-progress__point');
+
+        if (e.target.closest('.checkbox') && !e.target.hasAttribute('disabled')) {
+            e.target.closest('.checkbox').classList.toggle('active');
+        }
+
+        if (e.target.closest('.radio')) {
+            inspectionInputs(document.querySelectorAll('input[type="radio"]'));
+
+            if ($target.closest('.radio-btn-progress__point').length) {
+                width = $target.closest('.radio-btn-progress__point').position().left;
+
+                $slider.find('.radio-btn-progress__line').css({ 'width': width + 'px' });
+
+                $pointArr.each(function (i, item) {
+                    //
+                    if (index === -1) {
+                        $(item).hasClass('active') ? index = i : $(item).addClass('active');
+                    }
+
+                    if (i === $pointArr.length - 1) {
+                        index = -1;
+                    }
+                });
             }
-        });
+        }
     });
+
+    document.addEventListener('click', function (e) {
+        for (var i = 0; i < reset.length; i++) {
+            if (e.target === reset[i]) {
+                setTimeout(function () {
+                    inspectionInputs(document.querySelectorAll('input[type="checkbox"], input[type="radio"]'));
+                }, 0);
+            }
+        }
+    });
+}
+
+function inspectionInputs(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i].checked) {
+            arr[i].parentElement.classList.add('active');
+        } else {
+            arr[i].parentElement.classList.remove('active');
+        }
+
+        if (arr[i].hasAttribute('disabled')) {
+            arr[i].parentElement.classList.add('disabled');
+        }
+    }
 }
 
 // скрипт ползунка калькулятора
@@ -478,3 +570,100 @@ function setSliderHandle(i, value) {
 
 //установка значения
 //slider.noUiSlider.set(10);
+
+
+// function inputFilter() {
+//     if (document.querySelectorAll('.inputs-wrap').length) {
+//         (function () {
+//
+//             //проверки
+//             var maxColumn = function maxColumn() {
+//                 var width = 0,
+//                     count = 0;
+//                 for (var i = 0; i < arrNew.length; i++) {
+//                     width += arrNew[i].offsetWidth + 50;
+//                     count++;
+//                     if (width > maxWidth) {
+//                         count--;
+//                         return count;
+//                     }
+//                 }
+//             };
+//
+//             //сортировка input по длине и рассчет колонок
+//             var arr = document.querySelectorAll('.inputs-wrap .checkbox'),
+//                 arrNew = [],
+//                 wrap = document.querySelector('.inputs-wrap'),
+//                 maxWidth = wrap.offsetWidth,
+//                 columns = 0;
+//
+//             arr.forEach(function (item) {
+//                 arrNew.push(item);
+//             });
+//
+//             arrNew.sort(function (a, b) {
+//                 return b.offsetWidth - a.offsetWidth;
+//             });
+//
+//             var elInColumn = Math.ceil(arrNew.length / maxColumn()),
+//                 maxCol = maxColumn();
+//
+//             //колонки
+//             for (var i = 0; i < maxCol; i++) {
+//                 (function () {
+//                     var div = document.createElement('div');
+//                     div.classList.add('checkbox__column');
+//
+//                     //запихиваем элементы в колонку
+//                     for (var _i = 0; _i < elInColumn; _i++) {
+//                         if (arrNew.length) {
+//                             div.append(arrNew.shift());
+//                         }
+//                     }
+//
+//                     wrap.append(div);
+//                 })();
+//             }
+//
+//             document.querySelectorAll('.checkbox__column').forEach(function (item) {
+//                 item.classList.add('js-calculated');
+//             });
+//
+//             document.querySelector('.inputs-wrap').classList.add('js-calculated');
+//         })();
+//     }
+// }
+
+//определение количества списков в блоке с табами
+function countTabsContentList() {
+    $('.tabs-list-wrap').each(function () {
+        if ($('.tabs-list', $(this)).length === 1) {
+            $(this).addClass('js-single');
+        }
+    });
+}
+
+//сдвиг центра при наличии слайдера в описании раздела
+function shiftCenterPageDescription() {
+    if ($('.page-description-slider').length) {
+        $('.page-description__inner').css('padding-bottom', 120 + 'px');
+    }
+}
+
+//часто задаваемые вопросы
+function faq() {
+    $(document).on('click', '.faq-question', function () {
+        $(this).toggleClass('active').next('.faq-answer').slideToggle();
+    });
+}
+
+//обрезка текста
+function cropText(item, size) {
+
+    item.each(function () {
+        var newsText = $(this).text();
+        if (newsText.length > size) {
+            $(this).text(newsText.slice(0, size) + '...');
+        }
+    });
+}

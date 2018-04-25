@@ -361,6 +361,8 @@
     </div>
 </div>
 
+<div id="toUp"></div>
+
 <!-- - - - - - - - - - popups - - - - - - - - - -->
 <!-- обратный звонок -->
 <div id="feedback" class="popup">
@@ -389,11 +391,11 @@
         <div class="field__wrap">
             <label class="field__label custom-placeholder-wrap">
                 <span class="block">
-                    <input  type="text"
-                            class="field error js-phone-mask"
-                            autocomplete="off"
-                            placeholder=""
-                            name="phone">
+                    <input type="text"
+                           class="field error js-phone-mask"
+                           autocomplete="off"
+                           placeholder=""
+                           name="phone">
 
                     <!--тултип для обязательных полей, чтобы появился,
                      на input добавить класс error-->
@@ -501,7 +503,7 @@
 
 <!-- заказ монтаж и обслуживание -->
 <div id="mounting" class="popup">
-    <h2>Заявка на монтаж и обслуживание</h2>
+    <h2>Заявка на <br> монтаж и обслуживание</h2>
     <form name="mounting" action="#" method="post">
 
         <div class="field__wrap">
@@ -756,6 +758,652 @@
         <input type="submit" value="Отправить заявку" class="btn btn-submit">
     </form>
 </div>
+
+<!-- Заявка на газификацию -->
+<div id="gasification-order" class="popup">
+    <h2>Заявка на газификацию</h2>
+    <form name="shipment-order" action="#" method="post">
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+            <span class="block">
+                <input type="text" autocomplete="off" class="field" placeholder="" name="name">
+
+                <!--тултип для обязательных полей-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                <!--/-->
+
+            </span>
+                <span class="custom-placeholder">Ваше имя</span>
+            </label>
+        </div>
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+                <span class="block">
+                    <input type="text" class="field js-phone-mask error" autocomplete="off" placeholder="" name="phone">
+
+                    <!--тултип для обязательных полей, чтобы появился,
+                     на input добавить класс error-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                    <!--/-->
+
+                </span>
+                <span class="custom-placeholder">Телефон для связи</span>
+            </label>
+        </div>
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+            <span class="block">
+                <input type="text" autocomplete="off" class="field" placeholder="" name="email">
+
+                <!--тултип для обязательных полей-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                <!--/-->
+
+            </span>
+                <span class="custom-placeholder">Ваш email</span>
+            </label>
+        </div>
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+            <span class="block">
+                <input type="text" autocomplete="off" class="field" placeholder="" name="address">
+
+                <!--тултип для обязательных полей-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                <!--/-->
+
+            </span>
+                <span class="custom-placeholder">Адрес установки газификации</span>
+            </label>
+        </div>
+
+        <input type="submit" value="Отправить заявку" class="btn btn-submit">
+    </form>
+</div>
+
+<!-- Заявка на установку канализации -->
+<div id="sewerages-order" class="popup">
+    <h2>Заявка на установку канализации</h2>
+    <form name="shipment-order" action="#" method="post">
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+            <span class="block">
+                <input type="text" autocomplete="off" class="field" placeholder="" name="name">
+
+                <!--тултип для обязательных полей-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                <!--/-->
+
+            </span>
+                <span class="custom-placeholder">Ваше имя</span>
+            </label>
+        </div>
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+                <span class="block">
+                    <input type="text" class="field js-phone-mask error" autocomplete="off" placeholder="" name="phone">
+
+                    <!--тултип для обязательных полей, чтобы появился,
+                     на input добавить класс error-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                    <!--/-->
+
+                </span>
+                <span class="custom-placeholder">Телефон для связи</span>
+            </label>
+        </div>
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+            <span class="block">
+                <input type="text" autocomplete="off" class="field" placeholder="" name="email">
+
+                <!--тултип для обязательных полей-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                <!--/-->
+
+            </span>
+                <span class="custom-placeholder">Ваш email</span>
+            </label>
+        </div>
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+            <span class="block">
+                <input type="text" autocomplete="off" class="field" placeholder="" name="address">
+
+                <!--тултип для обязательных полей-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                <!--/-->
+
+            </span>
+                <span class="custom-placeholder">Адрес установки канализации</span>
+            </label>
+        </div>
+
+        <div class="field__wrap">
+            <label class="field__label field_short">
+                Кол-во человек<br>
+                проживающих в доме
+                <span class="block">
+                    <input type="text" autocomplete="off" class="field" placeholder="" name="peoples">
+
+                    <!--тултип для обязательных полей-->
+                        <span class="tooltip field__tooltip">
+                            <img src="assets/images/error-icon.svg" alt="">
+                            <span class="tooltip__description">
+                                Необходимо заполнить поле
+                            </span>
+                        </span>
+                    <!--/-->
+
+                </span>
+            </label>
+        </div>
+
+        <input type="submit" value="Отправить заявку" class="btn btn-submit">
+    </form>
+</div>
+
+<!-- заявка на установку котельной -->
+<div id="mounting-steamshop" class="popup">
+    <h2>Заявка на <br> установку котельной</h2>
+    <form name="mounting" action="#" method="post">
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+            <span class="block">
+                <input type="text" autocomplete="off" class="field" placeholder="" name="name">
+
+                <!--тултип для обязательных полей-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                <!--/-->
+
+            </span>
+                <span class="custom-placeholder">Ваше имя</span>
+            </label>
+        </div>
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+                <span class="block">
+                    <input type="text" class="field js-phone-mask error" autocomplete="off" placeholder="" name="phone">
+
+                    <!--тултип для обязательных полей, чтобы появился,
+                     на input добавить класс error-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                    <!--/-->
+
+                </span>
+                <span class="custom-placeholder">Телефон для связи</span>
+            </label>
+        </div>
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+            <span class="block">
+                <input type="text" autocomplete="off" class="field" placeholder="" name="email">
+
+                <!--тултип для обязательных полей-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                <!--/-->
+
+            </span>
+                <span class="custom-placeholder">Ваш email</span>
+            </label>
+        </div>
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+            <span class="block">
+                <input type="text" autocomplete="off" class="field" placeholder="" name="address">
+
+                <!--тултип для обязательных полей-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                <!--/-->
+
+            </span>
+                <span class="custom-placeholder">Адрес установки котельной</span>
+            </label>
+        </div>
+
+        <input type="submit" value="Отправить заявку" class="btn btn-submit">
+    </form>
+</div>
+
+<!-- заявка на установку источника электроэнергии -->
+<div id="power-source-order" class="popup">
+    <h2>заявка на установку <br> источника электроэнергии</h2>
+    <form name="shipment-order" action="#" method="post">
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+            <span class="block">
+                <input type="text" autocomplete="off" class="field" placeholder="" name="name">
+
+                <!--тултип для обязательных полей-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                <!--/-->
+
+            </span>
+                <span class="custom-placeholder">Ваше имя</span>
+            </label>
+        </div>
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+                <span class="block">
+                    <input type="text" class="field js-phone-mask error" autocomplete="off" placeholder="" name="phone">
+
+                    <!--тултип для обязательных полей, чтобы появился,
+                     на input добавить класс error-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                    <!--/-->
+
+                </span>
+                <span class="custom-placeholder">Телефон для связи</span>
+            </label>
+        </div>
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+            <span class="block">
+                <input type="text" autocomplete="off" class="field" placeholder="" name="email">
+
+                <!--тултип для обязательных полей-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                <!--/-->
+
+            </span>
+                <span class="custom-placeholder">Ваш email</span>
+            </label>
+        </div>
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+            <span class="block">
+                <input type="text" autocomplete="off" class="field" placeholder="" name="address">
+
+                <!--тултип для обязательных полей-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                <!--/-->
+
+            </span>
+                <span class="custom-placeholder">Адрес установки источника электроэнерг...</span>
+            </label>
+        </div>
+
+        <input type="submit" value="Отправить заявку" class="btn btn-submit">
+    </form>
+</div>
+
+<!-- заявка на доставку баллонов -->
+<div id="cylinder-shipment-order" class="popup">
+    <h2>заявка на доставку баллонов</h2>
+    <form name="shipment-order" action="#" method="post">
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+            <span class="block">
+                <input type="text" autocomplete="off" class="field" placeholder="" name="name">
+
+                <!--тултип для обязательных полей-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                <!--/-->
+
+            </span>
+                <span class="custom-placeholder">Ваше имя</span>
+            </label>
+        </div>
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+                <span class="block">
+                    <input type="text" class="field js-phone-mask error" autocomplete="off" placeholder="" name="phone">
+
+                    <!--тултип для обязательных полей, чтобы появился,
+                     на input добавить класс error-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                    <!--/-->
+
+                </span>
+                <span class="custom-placeholder">Телефон для связи</span>
+            </label>
+        </div>
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+            <span class="block">
+                <input type="text" autocomplete="off" class="field" placeholder="" name="email">
+
+                <!--тултип для обязательных полей-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                <!--/-->
+
+            </span>
+                <span class="custom-placeholder">Ваш email</span>
+            </label>
+        </div>
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+            <span class="block">
+                <input type="text" autocomplete="off" class="field" placeholder="" name="address">
+
+                <!--тултип для обязательных полей-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                <!--/-->
+
+            </span>
+                <span class="custom-placeholder">Адрес доставки баллонов</span>
+            </label>
+        </div>
+
+        <input type="submit" value="Отправить заявку" class="btn btn-submit">
+    </form>
+</div>
+
+<!-- ОФОРМЛЕНИЕ СКИДОЧНОЙ КАРТЫ -->
+<div id="discount-card-order" class="popup">
+    <h2>ОФОРМЛЕНИЕ СКИДОЧНОЙ КАРТЫ</h2>
+    <form name="shipment-order" action="#" method="post">
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+            <span class="block">
+                <input type="text" autocomplete="off" class="field" placeholder="" name="name">
+
+                <!--тултип для обязательных полей-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                <!--/-->
+
+            </span>
+                <span class="custom-placeholder">ФИО</span>
+            </label>
+        </div>
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+                <span class="block">
+                    <input type="text" class="field js-phone-mask error" autocomplete="off" placeholder="" name="phone">
+
+                    <!--тултип для обязательных полей, чтобы появился,
+                     на input добавить класс error-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                    <!--/-->
+
+                </span>
+                <span class="custom-placeholder">Телефон для связи</span>
+            </label>
+        </div>
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+            <span class="block">
+                <input type="text" autocomplete="off" class="field" placeholder="" name="email">
+
+                <!--тултип для обязательных полей-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                <!--/-->
+
+            </span>
+                <span class="custom-placeholder">Email</span>
+            </label>
+        </div>
+
+        <div class="hr field__wrap"></div>
+
+        <div class="field__wrap checkbox-group">
+            <p>Укажите события, информацию о которых хотели бы получать</p>
+            <div class="checkbox-group-item">
+                <label class="checkbox">
+                    <input type="checkbox">Новые предложения
+                </label>
+            </div>
+            <div class="checkbox-group-item">
+                <label class="checkbox checkbox-group-item">
+                    <input type="checkbox">Скидки, розыгрыши
+                </label>
+            </div>
+        </div>
+
+        <div class="field__wrap checkbox-group">
+            <p>Каким способом Вы хотели бы получать от нас информацию?</p>
+            <div class="checkbox-group-item">
+                <label class="checkbox">
+                    <input type="checkbox">Новые предложения
+                </label>
+            </div>
+            <div class="checkbox-group-item">
+                <label class="checkbox checkbox-group-item">
+                    <input type="checkbox">Скидки, розыгрыши
+                </label>
+            </div>
+        </div>
+
+        <div class="shipment-form__select-wrap shipment-form popup-select theme_light">
+            <span class="shipment-form__select-title">Выберите АГЗС где будете забирать карту.</span>
+            <select name="" id="" class="js_distance">
+                <option selected value="">АГЗС N4, «Экогазсервис» ООО, Спб, Новосельковская ул., 39/А</option>
+                <option value="">АГЗС N4, «Экогазсервис» ООО, Спб, Новосельковская ул., 39/А</option>
+                <option value="">АГЗС N4, «Экогазсервис» ООО, Спб, Новосельковская ул., 39/А</option>
+                <option value="">АГЗС N4, «Экогазсервис» ООО, Спб, Новосельковская ул., 39/А</option>
+            </select>
+        </div>
+
+        <input type="submit" value="оформить скидочную карту" class="btn btn-submit">
+    </form>
+</div>
+
+<!-- заявка на обслуживание газификации -->
+<div id="maintenance-gasification-order" class="popup">
+    <h2>заявка на обслуживание <br> газификации</h2>
+    <form name="shipment-order" action="#" method="post">
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+            <span class="block">
+                <input type="text" autocomplete="off" class="field" placeholder="" name="name">
+
+                <!--тултип для обязательных полей-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                <!--/-->
+
+            </span>
+                <span class="custom-placeholder">Ваше имя</span>
+            </label>
+        </div>
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+                <span class="block">
+                    <input type="text" class="field js-phone-mask error" autocomplete="off" placeholder="" name="phone">
+
+                    <!--тултип для обязательных полей, чтобы появился,
+                     на input добавить класс error-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                    <!--/-->
+
+                </span>
+                <span class="custom-placeholder">Телефон для связи</span>
+            </label>
+        </div>
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+            <span class="block">
+                <input type="text" autocomplete="off" class="field" placeholder="" name="email">
+
+                <!--тултип для обязательных полей-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                <!--/-->
+
+            </span>
+                <span class="custom-placeholder">Ваш email</span>
+            </label>
+        </div>
+
+        <div class="field__wrap">
+            <label class="field__label custom-placeholder-wrap">
+            <span class="block">
+                <input type="text" autocomplete="off" class="field" placeholder="" name="address">
+
+                <!--тултип для обязательных полей-->
+                    <span class="tooltip field__tooltip">
+                        <img src="assets/images/error-icon.svg" alt="">
+                        <span class="tooltip__description">
+                            Необходимо заполнить поле
+                        </span>
+                    </span>
+                <!--/-->
+
+            </span>
+                <span class="custom-placeholder">Адрес обслуживания</span>
+            </label>
+        </div>
+
+        <input type="submit" value="Отправить заявку" class="btn btn-submit">
+    </form>
+</div>
+
+
+                                  
 
 
 <script src="assets/js/libs.js"></script>
