@@ -368,12 +368,3 @@ function findCityId(arr, id) {
 
     return cityObj[0];
 }
-
-
-
-
-
-
-
-
-
