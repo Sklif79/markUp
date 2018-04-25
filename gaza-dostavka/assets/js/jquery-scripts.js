@@ -278,7 +278,7 @@ function initOfficeMap() {
         url: "https://github.com/Sklif79/markUp/blob/master/gaza-dostavka/assets/js/data-offices.json",
         secure: true
     }).done(function (data) {
-
+var data = data.addHeader("Access-Control-Allow-Origin", "*");
         // window.cityObjData = data;
         selectCityInit(data);
 
