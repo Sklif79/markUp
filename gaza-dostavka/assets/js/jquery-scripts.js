@@ -179,6 +179,7 @@ $(document).ready(function () {
     }
 });
 
+function initMapStation() {
     var mapObj;
     mapObj = {
         center: [59.93424151987533, 30.334370355622525],
@@ -212,7 +213,7 @@ $(document).ready(function () {
 
     //чтобы иконка стала активной, добавить нужному <i> класс active
     $.ajax({
-        url: "/assets/js/data.json"
+        url: "https://github.com/Sklif79/markUp/blob/master/gaza-dostavka/assets/js/data.json"
     }).done(function (data) {
         objectManager.add(data);
     });
@@ -274,7 +275,7 @@ function initOfficeMap() {
     myMap.geoObjects.add(objectManager);
 
     $.ajax({
-        url: "assets/js/data-offices.json"
+        url: "https://github.com/Sklif79/markUp/blob/master/gaza-dostavka/assets/js/data-offices.json"
     }).done(function (data) {
 
         // window.cityObjData = data;
