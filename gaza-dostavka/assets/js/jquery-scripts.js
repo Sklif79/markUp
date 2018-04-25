@@ -179,7 +179,6 @@ $(document).ready(function () {
     }
 });
 
-function initMapStation() {
     var mapObj;
     mapObj = {
         center: [59.93424151987533, 30.334370355622525],
@@ -275,7 +274,7 @@ function initOfficeMap() {
     myMap.geoObjects.add(objectManager);
 
     $.ajax({
-        url: "data-offices.json"
+        url: "assets/js/data-offices.json"
     }).done(function (data) {
 
         // window.cityObjData = data;
