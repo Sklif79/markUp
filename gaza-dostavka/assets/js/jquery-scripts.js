@@ -275,7 +275,8 @@ function initOfficeMap() {
     myMap.geoObjects.add(objectManager);
 
     $.ajax({
-        url: "https://github.com/Sklif79/markUp/blob/master/gaza-dostavka/assets/js/data-offices.json"
+        url: "https://github.com/Sklif79/markUp/blob/master/gaza-dostavka/assets/js/data-offices.json",
+        secure: true
     }).done(function (data) {
 
         // window.cityObjData = data;
