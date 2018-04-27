@@ -1,9 +1,13 @@
 'use strict';
 
 ready(function () {
+    //глобальная переменная для ширины экрана
+    window.screenWidth = $(window).width();
+
     customPlaceholderInit();
     tooltipClick();
     asideNav();
+    // eventsAsideNav();
     asideFidback();
     mainPage();
     radioBtn($('.shipment-form__city input[type="radio"]'));
@@ -29,6 +33,8 @@ ready(function () {
     }, 0);
 
     $(window).resize(function () {
+        window.screenWidth = $(window).width();
+
         setTimeout(function () {
             $('.three-columns__title').css('height', 'auto').setMaxHeights();
             $('.four-columns__title').css('height', 'auto').setMaxHeights();
@@ -160,6 +166,12 @@ function tooltipClick() {
     }
 }
 
+window.asideNavCheck = {
+    init: false, // первичная инициализация
+    firstTitle: false, //
+    lastSizeMobile: false
+};
+
 var asideNav = function asideNav() {
     var asideNav = {
         $ul: $('ul.aside-nav > li > ul'),
@@ -167,6 +179,7 @@ var asideNav = function asideNav() {
         $content: $('div.content'),
         width: 280,
 
+        //вставка подзаголовка в меню
         appendFirstItemNav: function appendFirstItemNav() {
             var $asideNavUl = document.querySelectorAll('.aside-nav ul'),
                 li,
@@ -188,6 +201,9 @@ var asideNav = function asideNav() {
                 $asideNavUl[i].insertBefore(li, $asideNavUl[i].firstChild);
             }
         },
+
+
+        //рассчет левой позиции
         setLeftPositionNav: function setLeftPositionNav() {
             var asideNavEL = document.querySelectorAll('.aside-nav > li');
 
@@ -195,12 +211,15 @@ var asideNav = function asideNav() {
                 enumChildNodes(asideNavEL[i], 1);
             }
         },
+
+
+        //логика работы выезжающего меню
         asideHover: function asideHover() {
             var self = this,
                 $asideTextBlock = $('span.aside-nav__txt, span.aside-callback__txt, a.aside-callback__link img');
 
             this.$aside.hover(function () {
-                if (!isMainPage()) {
+                if (!isMainPage() && screenWidth > 1024) {
                     self.$aside.removeClass('moved');
 
                     setTimeout(function () {
@@ -224,7 +243,7 @@ var asideNav = function asideNav() {
                     self.$content.removeClass('js-aside-hover');
                 }
 
-                if (!isMainPage()) {
+                if (!isMainPage() && screenWidth > 1024) {
                     self.$aside.addClass('overlay-mask');
                     $asideTextBlock.hide();
 
@@ -240,12 +259,17 @@ var asideNav = function asideNav() {
                     $('body').removeClass('blocked');
                 }
             });
+        },
+        asideMobile: function asideMobile() {
+            // $(document).on('click')
+            if (screenWidth < 1025) {}
         }
     };
 
     asideNav.setLeftPositionNav();
-    asideNav.appendFirstItemNav();
     asideNav.asideHover();
+    asideNav.appendFirstItemNav();
+    asideNav.asideMobile();
 };
 
 /**
@@ -572,68 +596,6 @@ function setSliderHandle(i, value) {
 //slider.noUiSlider.set(10);
 
 
-// function inputFilter() {
-//     if (document.querySelectorAll('.inputs-wrap').length) {
-//         (function () {
-//
-//             //проверки
-//             var maxColumn = function maxColumn() {
-//                 var width = 0,
-//                     count = 0;
-//                 for (var i = 0; i < arrNew.length; i++) {
-//                     width += arrNew[i].offsetWidth + 50;
-//                     count++;
-//                     if (width > maxWidth) {
-//                         count--;
-//                         return count;
-//                     }
-//                 }
-//             };
-//
-//             //сортировка input по длине и рассчет колонок
-//             var arr = document.querySelectorAll('.inputs-wrap .checkbox'),
-//                 arrNew = [],
-//                 wrap = document.querySelector('.inputs-wrap'),
-//                 maxWidth = wrap.offsetWidth,
-//                 columns = 0;
-//
-//             arr.forEach(function (item) {
-//                 arrNew.push(item);
-//             });
-//
-//             arrNew.sort(function (a, b) {
-//                 return b.offsetWidth - a.offsetWidth;
-//             });
-//
-//             var elInColumn = Math.ceil(arrNew.length / maxColumn()),
-//                 maxCol = maxColumn();
-//
-//             //колонки
-//             for (var i = 0; i < maxCol; i++) {
-//                 (function () {
-//                     var div = document.createElement('div');
-//                     div.classList.add('checkbox__column');
-//
-//                     //запихиваем элементы в колонку
-//                     for (var _i = 0; _i < elInColumn; _i++) {
-//                         if (arrNew.length) {
-//                             div.append(arrNew.shift());
-//                         }
-//                     }
-//
-//                     wrap.append(div);
-//                 })();
-//             }
-//
-//             document.querySelectorAll('.checkbox__column').forEach(function (item) {
-//                 item.classList.add('js-calculated');
-//             });
-//
-//             document.querySelector('.inputs-wrap').classList.add('js-calculated');
-//         })();
-//     }
-// }
-
 //определение количества списков в блоке с табами
 function countTabsContentList() {
     $('.tabs-list-wrap').each(function () {
@@ -667,3 +629,7 @@ function cropText(item, size) {
         }
     });
 }
+
+// window.screenWidth = function() {
+//     return $(window).width();
+// };
