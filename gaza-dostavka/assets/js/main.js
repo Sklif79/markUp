@@ -215,18 +215,11 @@ var asideNav = function asideNav() {
 
         //логика работы выезжающего меню
         asideHover: function asideHover() {
-            var self = this,
-                $asideTextBlock = $('span.aside-nav__txt, span.aside-callback__txt, a.aside-callback__link img');
+            var self = this;
 
             this.$aside.hover(function () {
                 if (!isMainPage() && screenWidth > 1024) {
                     self.$aside.removeClass('moved');
-
-                    setTimeout(function () {
-                        if (!self.$aside.hasClass('moved')) {
-                            $asideTextBlock.fadeIn();
-                        }
-                    }, 400);
 
                     setTimeout(function () {
                         self.$aside.removeClass('overlay-mask');
@@ -245,16 +238,9 @@ var asideNav = function asideNav() {
 
                 if (!isMainPage() && screenWidth > 1024) {
                     self.$aside.addClass('overlay-mask');
-                    $asideTextBlock.hide();
+                    self.$aside.addClass('moved');
 
-                    setTimeout(function () {
-                        self.$aside.addClass('moved');
-                        $asideTextBlock.hide();
-                    }, 450);
-
-                    setTimeout(function () {
-                        self.$aside.addClass('overlay-mask');
-                    }, 650);
+                    self.$aside.addClass('overlay-mask');
 
                     $('body').removeClass('blocked');
                 }
@@ -262,7 +248,9 @@ var asideNav = function asideNav() {
         },
         asideMobile: function asideMobile() {
             // $(document).on('click')
-            if (screenWidth < 1025) {}
+            // if (screenWidth < 1025) {
+            //
+            // }
         }
     };
 
@@ -449,7 +437,7 @@ function checkedInput() {
                 $slider.find('.radio-btn-progress__line').css({ 'width': width + 'px' });
 
                 $pointArr.each(function (i, item) {
-                    //
+
                     if (index === -1) {
                         $(item).hasClass('active') ? index = i : $(item).addClass('active');
                     }
@@ -629,7 +617,3 @@ function cropText(item, size) {
         }
     });
 }
-
-// window.screenWidth = function() {
-//     return $(window).width();
-// };
