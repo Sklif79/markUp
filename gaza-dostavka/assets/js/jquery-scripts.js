@@ -122,6 +122,8 @@ $(document).ready(function () {
         autoReinitialise: true
     });
 
+    $('.tooltip-click__inner').jScrollPane();
+
     //mask showMaskOnHover
     $('.js-phone-mask').inputmask({
         "mask": "+7 (999) 999-99-99",
@@ -151,13 +153,6 @@ $(document).ready(function () {
         minimumResultsForSearch: Infinity
     });
 
-    //custom select for counters with gray label
-    $('.js_select-count').select2({
-        width: 90,
-        theme: 'classic',
-        minimumResultsForSearch: Infinity
-    }).css({'opacity': '1'});
-
     //табы
     $("#tabs-content div").hide(); // Скрытое содержимое
     $("#tabs-list li:first").attr("id", "current"); // Какой таб показать первым
@@ -177,6 +172,22 @@ $(document).ready(function () {
     } else if (window.ymaps && $('#office-map').length) {
         ymaps.ready(initOfficeMap);
     }
+
+    (function(){
+        var $el = $('.person-type');
+
+        personTypeHideLineOnLoad($el);
+
+        $el.on('click', personTypeHideLineOnClick);
+    })();
+
+    $( '.tooltip-click__inner' ).bind( 'mousewheel DOMMouseScroll', function ( e ) {
+        var e0 = e.originalEvent,
+            delta = e0.wheelDelta || -e0.detail;
+
+        this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+        e.preventDefault();
+    });
 });
 
 function initMapStation() {
@@ -273,6 +284,7 @@ function initOfficeMap() {
     });
     objectManager.clusters.options.set('preset', 'blue#redClusterIcons');
     myMap.geoObjects.add(objectManager);
+    myMap.behaviors.disable('scrollZoom');
 
     $.ajax({
         url: "/assets/js/data-offices.json"
@@ -368,6 +380,32 @@ function findCityId(arr, id) {
 
     return cityObj[0];
 }
+
+//удаление поля "название организации" для физ. лиц
+function personTypeHideLineOnLoad($el) {
+    var i,
+        $target;
+
+    $target = $el.closest('form').find('.js_person-hide');
+
+    for (i = 0; i < $el.length; i++) {
+        if ($($el[i]).hasClass('person') && $($el[i]).prop('checked')) {
+            $target.hide();
+        }
+    }
+}
+
+function personTypeHideLineOnClick(e) {
+    var $el = $(e.target),
+        $target = $el.closest('form').find('.js_person-hide');
+
+    if ($el.hasClass('person')) {
+        $target.hide();
+    } else if ($el.hasClass('organization')) {
+        $target.show();
+    }
+}
+
 
 
 
